@@ -10,8 +10,8 @@ sudo mkswap /swapfile
 
 sudo swapon /swapfile
 
-sudo echo "/swapfile   none    swap    sw    0   0" >> archivo.txt
+sudo echo "/swapfile   none    swap    sw    0   0" >> /etc/fstab
 
 sudo sysctl vm.swappiness=10
 
-sudo echo "vm.swappiness=10" >> archivo.txt
+sudo echo "vm.swappiness=10" >> /etc/sysctl.conf
