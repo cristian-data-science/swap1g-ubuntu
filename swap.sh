@@ -1,17 +1,17 @@
 #!/bin/bash
 
-sudo apt-get update
+apt-get update
 
-sudo fallocate -l 1G /swapfile
+fallocate -l 1G /swapfile
 
-sudo chmod 600 /swapfile
+chmod 600 /swapfile
 
-sudo mkswap /swapfile
+mkswap /swapfile
 
-sudo swapon /swapfile
+swapon /swapfile
 
-sudo echo "/swapfile   none    swap    sw    0   0" >> /etc/fstab
+echo "/swapfile   none    swap    sw    0   0" >> /etc/fstab
 
-sudo sysctl vm.swappiness=10
+sysctl vm.swappiness=10
 
-sudo echo "vm.swappiness=10" >> /etc/sysctl.conf
+echo "vm.swappiness=10" >> /etc/sysctl.conf
