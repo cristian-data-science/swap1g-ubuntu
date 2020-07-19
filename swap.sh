@@ -2,7 +2,7 @@
 
 apt-get update
 
-fallocate -l 1G /swapfile
+fallocate -l 512MB /swapfile
 
 chmod 600 /swapfile
 
